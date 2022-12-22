@@ -243,13 +243,17 @@ img {
 }
 .ipads img {
   width: 15rem;
+  transition: width .3s ease-in-out;
+}
+.ipads img:hover {
+  width: 18rem;
 }
 
 .ipads h4,
 .ipads p {
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: var(--fuenteSecundaria);
-  color: var(--white);
+  color: #00000061;
   margin: 0;
   font-weight: 900;
   text-align: center;
@@ -263,12 +267,17 @@ img {
   background-color: var(--colorPrimario);
   justify-content: center;
 }
+
 .ipadpro-max img {
   width: 20rem;
+}
+.ipadpro-max img:hover {
+  width: 25rem;
 }
 .ipadpro-max .version-description h4,
 .ipadpro-max .version-description p {
   color: var(--white);
+  font-size: 4rem;
 }
 
 .ipadpro-x {
