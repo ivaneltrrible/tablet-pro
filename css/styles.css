@@ -230,33 +230,52 @@ img {
   font-size: 5.5rem;
 }
 .version {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column-reverse;
   gap: 2rem;
+}
+@media (min-width: 768px) {
+  .version {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .ipads { 
   background-color: var(--grisClaro);
   border-radius: 2rem;
   padding: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .ipads img {
-  width: 15rem;
+  width: 12rem;
   transition: width .3s ease-in-out;
 }
 .ipads img:hover {
-  width: 18rem;
+  width: 15rem;
 }
 
 .ipads h4,
 .ipads p {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-family: var(--fuenteSecundaria);
   color: #00000061;
   margin: 0;
   font-weight: 900;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .ipads h4,
+  .ipads p {
+    font-size: 2.5rem;
+  }
+  .ipads img {
+    width: 15rem;
+    transition: width .3s ease-in-out;
+  }
+  .ipads img:hover {
+    width: 17rem;
+  }
 }
 .ipadpro-max {
   grid-column: 2 / 3;
@@ -269,15 +288,30 @@ img {
 }
 
 .ipadpro-max img {
-  width: 20rem;
+  width: 15rem;
 }
 .ipadpro-max img:hover {
-  width: 25rem;
+  width: 18rem;
 }
 .ipadpro-max .version-description h4,
 .ipadpro-max .version-description p {
   color: var(--white);
-  font-size: 4rem;
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .ipadpro-max .version-description h4,
+  .ipadpro-max .version-description p {
+      font-size: 3.5rem;
+  }
+  .ipadpro-max img {
+    width: 18rem;
+  }
+  .ipadpro-max img:hover {
+    width: 22rem;
+  }
+  .ipadpro-max img:hover .version-description h4 {
+    font-size: 2rem;
+  }
 }
 
 .ipadpro-x {
