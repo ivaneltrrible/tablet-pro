@@ -234,7 +234,7 @@ img {
   flex-direction: column-reverse;
   gap: 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 962px) {
   .version {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -246,6 +246,13 @@ img {
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
+  transition: transform .5s;
+  width: 90%;
+  margin: auto;
+  min-height: 90%;
+}
+.ipads:hover {
+  transform: scale(1.1);
 }
 .ipads img {
   width: 12rem;
