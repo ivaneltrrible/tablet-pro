@@ -149,6 +149,10 @@ img {
 }
 .feature { 
   padding: 2rem;
+  transition: transform .3s;
+}
+.feature:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 768px) {
   .feature { 
@@ -164,6 +168,7 @@ img {
 .feature h3 {
   text-transform: uppercase;
 } 
+
 
 /************************************************************************************/
 /***********************************End Section features*********************************************/
@@ -330,4 +335,92 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+
+/* Newletter */
+.news-letter { /**\mobile version */
+  background-position: bottom bottom;
+  background-repeat: no-repeat;
+  background-size: 100%, 70rem;
+  margin: var(--separator) 0;
+  
+}
+.notwebp .news-letter{ /* this works with the script imagenes.js */
+  background-image: 
+                    linear-gradient( to bottom, transparent 50%, var(--white) 0%),
+                    url(../img/ipad-new-letter2.jpg);
+}
+.webp .news-letter{
+  background-image: 
+                    linear-gradient( to bottom, transparent 50%, var(--white) 0%),
+                    url(../img/ipad-new-letter2.webp);
+}
+
+@media (min-width: 768px) {/**\table version */
+  .news-letter {
+    background-position: center, center center;
+    background-size: 100% 45rem;
+  }
+  .notwebp .news-letter {
+    background-image: 
+                      linear-gradient( to right, transparent 50%, var(--white) 0%),
+                      url(../img/ipad-new-letter2.jpg);
+  }
+  .webp .news-letter{
+    background-image: 
+                    linear-gradient( to right, transparent 50%, var(--white) 0%),
+                    url(../img/ipad-new-letter2.webp);
+  }
+}
+@media (min-width: 920px) { /**\table version */
+  .news-letter {
+    background-size: 100%, 180rem;
+  }
+}@media (min-width: 1600px) { /**\monitor version */
+  .news-letter {
+    background-size: 100%, 260rem;
+  }
+}
+.news-letter-content {
+  display: grid;
+  grid-template-rows: repeat(2, 40rem);
+  gap: var(--separator);
+}
+@media (min-width: 768px) {
+  .news-letter-content {
+    grid-template-rows: unset;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.news-letter-text {
+  grid-row: 2 / 3;
+}
+@media (min-width: 768px) {
+  .news-letter-text {
+    grid-column: 2 / 3;
+  }
+}
+/* .news-letter-form {
+  
+} */
+.news-letter-form input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+.news-letter-form input[type="submit"] {
+  width: 100%;
+  padding: 2rem;
+  color: var(--white);
+  background-color: var(--colorPrimario);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.footer p {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--colorPrimario);
+  font-weight: 900;
 }
